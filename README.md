@@ -1,36 +1,121 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+📦 Quotemplified Core
 
-## Getting Started
+A minimal, reusable SaaS starter template for building AI-powered service business applications.
 
-First, run the development server:
-
-```bash
+⚡ Stack
+Next.js (App Router)
+Supabase (Auth + DB)
+Tailwind CSS + shadcn/ui
+Lemon Squeezy (Payments)
+Resend (Email)
+OpenCode Skills (AI workflows)
+🚀 Quick Start
+git clone https://github.com/YOUR_USERNAME/quotemplified-core.git
+cd quotemplified-core
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+http://localhost:3000
+📁 Project Structure
+quotemplified-core/
+│
+├── app/                # Pages (Next.js App Router)
+│   ├── page.tsx        # Landing page
+│   ├── dashboard/      # App dashboard
+│   └── auth/           # Login / signup
+│
+├── components/         # UI components (shadcn/ui)
+│
+├── lib/                # Core integrations
+│   ├── supabase.ts
+│   ├── email.ts
+│   └── payments.ts
+│
+├── modules/            # Business logic layer
+│   ├── lead-intake/
+│   ├── quote-engine/
+│   └── follow-up/
+│
+├── .opencode/          # AI workflow skills
+│   └── skills/
+│
+├── .env.local
+└── README.md
+🧩 Core Modules
+Lead Intake
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Handles customer inquiries and lead capture.
 
-## Learn More
+Quote Engine
 
-To learn more about Next.js, take a look at the following resources:
+Generates pricing and service estimates.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Follow-up System
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Automates reminders and customer engagement.
 
-## Deploy on Vercel
+🔐 Environment Variables
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Create .env.local:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+NEXT_PUBLIC_SUPABASE_URL=your_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_key
+
+RESEND_API_KEY=your_key
+LEMONSQUEEZY_API_KEY=your_key
+🧱 How to Use This Template
+1. Copy the project
+cp -r quotemplified-core new-saas-project
+cd new-saas-project
+2. Reset Git
+rm -rf .git
+git init
+3. Connect new GitHub repo
+git remote add origin YOUR_NEW_REPO_URL
+🤖 AI Workflow Layer (Optional)
+.opencode/skills/
+
+Each skill defines reusable AI behavior such as:
+
+Lead intake logic
+Quote generation
+Follow-up messaging
+🎯 Philosophy
+
+This template is built for:
+
+Fast SaaS creation without rebuilding infrastructure every time.
+
+No bloat. No enterprise complexity. Just reusable core systems.
+
+📌 License
+
+MIT — use freely.
+
+🧠 Why this version is better
+
+Compared to your previous README, this one:
+
+✔ Has:
+strong visual hierarchy
+quick start at top
+clean project tree block
+modular sections
+minimal reading effort
+❌ Removes:
+long explanations upfront
+repetitive descriptions
+“essay-style” formatting
+🔥 Pro tip (this is what OSS devs actually do)
+
+The best READMEs follow this order:
+
+1. What is this?
+2. How to run it (fast)
+3. Structure
+4. Features
+5. Env setup
+
+Everything else is optional.
