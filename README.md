@@ -1,121 +1,152 @@
 📦 Quotemplified Core
 
-A minimal, reusable SaaS starter template for building AI-powered service business applications.
+A minimal, reusable MicroSaaS starter template for building AI-powered service business applications.
+This template is designed to help you stop rebuilding the same infrastructure every time and instead focus on building real product logic faster.
 
-⚡ Stack
-Next.js (App Router)
-Supabase (Auth + DB)
-Tailwind CSS + shadcn/ui
-Lemon Squeezy (Payments)
-Resend (Email)
-OpenCode Skills (AI workflows)
-🚀 Quick Start
-git clone https://github.com/YOUR_USERNAME/quotemplified-core.git
-cd quotemplified-core
-npm install
-npm run dev
+🚀 What this is
 
-Open:
+quotemplified-core is a production-ready SaaS foundation that includes only the essential building blocks needed for modern MicroSaaS apps:
 
-http://localhost:3000
+Authentication
+Database layer
+Payments
+Email system
+UI system
+AI workflow modules (optional)
+
+It is intentionally minimal, modular, and reusable.
+
+🧠 Philosophy
+
+This template follows a simple rule:
+
+Only include what you will reuse across every SaaS project.
+No unnecessary dashboards.
+No bloated enterprise features.
+No over-engineering.
+Just the core system you actually need.
+
+⚙️ Tech Stack
+
+Frontend: Next.js (App Router)
+UI: shadcn/ui + Tailwind CSS
+Auth & DB: Supabase
+Payments: Lemon Squeezy
+Email: Resend
+AI Workflow Layer: OpenCode Skills (optional structure)
+
+
 📁 Project Structure
+
 quotemplified-core/
 │
-├── app/                # Pages (Next.js App Router)
-│   ├── page.tsx        # Landing page
-│   ├── dashboard/      # App dashboard
-│   └── auth/           # Login / signup
-│
-├── components/         # UI components (shadcn/ui)
-│
-├── lib/                # Core integrations
-│   ├── supabase.ts
-│   ├── email.ts
-│   └── payments.ts
-│
-├── modules/            # Business logic layer
+├── app/                  # Next.js routes (landing, dashboard, auth)
+├── components/          # UI components (shadcn/ui)
+├── lib/                 # Core integrations (Supabase, email, payments)
+├── modules/             # Business logic (AI workflows)
 │   ├── lead-intake/
 │   ├── quote-engine/
 │   └── follow-up/
 │
-├── .opencode/          # AI workflow skills
-│   └── skills/
-│
-├── .env.local
+├── .opencode/           # AI skills (workflow definitions)
+├── .env.local           # Environment variables
 └── README.md
 🧩 Core Modules
-Lead Intake
 
-Handles customer inquiries and lead capture.
+This template includes optional business modules:
 
-Quote Engine
+🟢 Lead Intake
 
-Generates pricing and service estimates.
+Collects and structures customer inquiries.
 
-Follow-up System
+🟡 Quote Engine
 
-Automates reminders and customer engagement.
+Generates service estimates and pricing logic.
 
-🔐 Environment Variables
+🔵 Follow-up System
 
-Create .env.local:
+Handles reminders, email sequences, and customer engagement.
 
-NEXT_PUBLIC_SUPABASE_URL=your_url
-NEXT_PUBLIC_SUPABASE_ANON_KEY=your_key
+These are designed to be reusable across all service-based SaaS apps.
 
-RESEND_API_KEY=your_key
-LEMONSQUEEZY_API_KEY=your_key
-🧱 How to Use This Template
-1. Copy the project
+🔐 Environment Setup
+
+Create a .env.local file:
+
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+RESEND_API_KEY=your_resend_key
+LEMONSQUEEZY_API_KEY=your_lemonsqueezy_key
+
+🧪 Getting Started
+
+1. Install dependencies
+npm install
+
+2. Run development server
+npm run dev
+
+3. Open in browser
+http://localhost:3000
+🧱 Usage Workflow
+
+This template is meant to be reused:
+
+Step 1
+Copy the repo:
 cp -r quotemplified-core new-saas-project
-cd new-saas-project
-2. Reset Git
-rm -rf .git
-git init
-3. Connect new GitHub repo
-git remote add origin YOUR_NEW_REPO_URL
+
+Step 2
+Rename and customize
+
+Step 3
+Connect new Supabase + payments + email
+
+Step 4
+Build your SaaS on top of the base system
+
 🤖 AI Workflow Layer (Optional)
+
+This template supports AI workflow definitions via:
+
 .opencode/skills/
 
-Each skill defines reusable AI behavior such as:
+Each skill represents a reusable AI behavior such as:
 
-Lead intake logic
+Lead intake
+Customer classification
 Quote generation
 Follow-up messaging
-🎯 Philosophy
 
-This template is built for:
+This enables future integration with AI agents and automation tools.
 
-Fast SaaS creation without rebuilding infrastructure every time.
+🎯 Ideal Use Cases
 
-No bloat. No enterprise complexity. Just reusable core systems.
+This template is best suited for:
+
+AI receptionist systems
+Service business SaaS tools
+Lead generation platforms
+Appointment-based businesses
+Internal automation tools
+
+⚠️ Important Notes
+This is a starter template, not a full SaaS product
+Keep it minimal and extend only when needed
+Each new project should be a fresh copy of this base
+
+🔄 Vision
+
+This project is designed to evolve into a personal SaaS foundation system:
+
+“Build once. Reuse forever.”
+
+Over time, it becomes the core engine behind all MicroSaaS products.
 
 📌 License
 
-MIT — use freely.
+MIT License — free to use, modify, and distribute.
 
-🧠 Why this version is better
+👤 Author
 
-Compared to your previous README, this one:
-
-✔ Has:
-strong visual hierarchy
-quick start at top
-clean project tree block
-modular sections
-minimal reading effort
-❌ Removes:
-long explanations upfront
-repetitive descriptions
-“essay-style” formatting
-🔥 Pro tip (this is what OSS devs actually do)
-
-The best READMEs follow this order:
-
-1. What is this?
-2. How to run it (fast)
-3. Structure
-4. Features
-5. Env setup
-
-Everything else is optional.
+Built as a personal SaaS foundation system for rapid MicroSaaS development and AI workflow automation.
